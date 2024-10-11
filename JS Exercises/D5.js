@@ -11,7 +11,10 @@ REGOLE
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
-console.log(pets)
+
+for (let i = 0; i < pets.length; i++) {
+  console.log(pets[i])
+}
 
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
@@ -76,11 +79,21 @@ cars.push({
 })
 
 for (let i = 0; i < cars.length; i++) {
-  delete cars[i].trims
+  cars[i].trims.pop()
 }
 console.log(cars)
 
-// HO SPOSTATO L'ESERCIZIO 7 IN FONDO PERCHE' NON FUNZIONAVANO GLI ALTRI ESERCIZI ALTRIMENTI -----------------------------------------------------------------------------------------
+/* ESERCIZIO 7
+    Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
+*/
+
+const justTrims = []
+
+for (let i = 0; i < cars.length; i++) {
+  justTrims.push(cars[i].trims[0])
+}
+
+console.log('Just trims:', justTrims)
 
 /* ESERCIZIO 8
 Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
@@ -104,7 +117,7 @@ const numericArray = [
 ]
 
 let i = 0
-while (i < numericArray.indexOf(32)) {
+while (i <= numericArray.indexOf(32)) {
   console.log(numericArray[i])
   i++
 }
@@ -124,13 +137,13 @@ for (let i = 0; i < charactersArray.length; i++) {
       numbersArray.push(7)
       break
     case 'n':
-      numbersArray.push(14)
+      numbersArray.push(12)
       break
     case 'u':
-      numbersArray.push(21)
+      numbersArray.push(19)
       break
     case 'z':
-      numbersArray.push(26)
+      numbersArray.push(21)
       break
     case 'd':
       numbersArray.push(4)
@@ -139,19 +152,3 @@ for (let i = 0; i < charactersArray.length; i++) {
 }
 
 console.log(numbersArray)
-
-/* ESERCIZIO 7
-    Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
-*/
-
-/*
-const justTrims = []
-
-for (let i = 0; i < cars.length; i++) {
-  justTrims.push(cars[i].trims[0])
-}
-
-console.log('Just trims:', justTrims)
-*/
-// -----------------------------------------------------------------------------------------
-// Per eseguire questo esercizio deve commentare l'esercizio 6 altrimenti il console.log() darà errore.   Purtroppo
